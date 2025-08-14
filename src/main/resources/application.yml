@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: api_classmanager
+  datasource:
+      url: jdbc:postgresql://localhost:5432/api.classmanager-db
+      username: api-classmanager-admin
+      password: api-classmanager-admin
+      driver-class-name: org.postgresql.Driver
+
+  #pgadmin user: api-classmanager@gmail.com
+  # pgadmin password: api-classmanager-admin
