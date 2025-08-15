@@ -2,7 +2,7 @@ spring:
   application:
     name: api_classmanager
   datasource:
-    url: jdbc:postgresql://localhost:5432/api_classmanager_db
+    url: jdbc:postgresql://localhost:5432/api_classmanager_admin
     username: api_classmanager_admin
     password: api_classmanager_admin
     driver-class-name: org.postgresql.Driver
