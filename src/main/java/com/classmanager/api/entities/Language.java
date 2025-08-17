@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -12,6 +13,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Getter
 @Setter
+@EntityListeners(AuditingEntityListener.class)
 public class Language {
 
     @Id
@@ -20,9 +22,6 @@ public class Language {
 
     @Column(name = "language_name")
     private String languageName;
-
-    @Column(name = "languageFlag")
-    private String languageFlag;
 
     @Column(name = "activeStatus")
     private boolean activeStatus;
