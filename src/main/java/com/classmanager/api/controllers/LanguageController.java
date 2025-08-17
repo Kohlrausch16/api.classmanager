@@ -15,7 +15,6 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/language")
-@RequiredArgsConstructor
 public class LanguageController {
 
     @Autowired
@@ -32,7 +31,7 @@ public class LanguageController {
             Optional<Language> language = languageRepository.findById(id);
             return language.get();
         } catch (NoSuchElementException e) {
-            throw new CustomNotFoundException("ID " + id + " not found");
+            throw new CustomNotFoundException(id.toString());
         }
     }
 
