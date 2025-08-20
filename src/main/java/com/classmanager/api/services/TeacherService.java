@@ -28,4 +28,8 @@ public class TeacherService {
     public List<Teacher> getTeachers(){
         return teacherRepository.findAll();
     }
+
+    public Teacher addTeacher(Teacher teacher){
+        return teacherRepository.save(teacher);
+    }
 }
